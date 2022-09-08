@@ -1,13 +1,21 @@
-institute: "Duke University <br> STA 199 - Fall 2022"
-author: "Dr. Mine Çetinkaya-Rundel"
-footer: "[🔗 sta199-f22-1.github.io](https://sta199-f22-1.github.io/)"
+institute: "Goldsmiths, University of London <br> PS52007D Research Methods in Psychology 2022/3"
+author: "Dr. Gordon Wright"
+footer: "[🔗 PS%2007DWeb.github.io](https://PS52007DWeb.github.io/)"
 logo: "images/logo.png"
 format:
   revealjs:
     theme: slides.scss
-    multiplex: true
+    # multiplex: true
     transition: fade
     slide-number: true
+    self-contained: true
+    incremental: false
+    controls: true
+    menu: true
+    controls-layout: bottom-right
+    preview-links: true
+    logo: images/logo.png
+
 editor: visual
 execute:
   freeze: auto
