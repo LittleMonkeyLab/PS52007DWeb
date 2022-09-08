@@ -6,37 +6,41 @@ project:
 
 website:
   page-navigation: true
-  title: "STA 199"
-  description: "Homepage for STA 199 - Introduction to Data Science at Duke University, Fall 2022, Section 1."
+  title: "PS52007D Research Methods in Psychology"
+  description: "Homepage for PS52007D Research Methods in Psychology at Goldsmiths, University of London"
   site-url: "https://sta199-f22-1.github.io/"
 
-  repo-url: https://github.com/sta199-f22-1/sta199-f22-1.github.io/
-  repo-actions: [edit, issue]
+  repo-url: https://github.com/LittleMonkeyLab/PS52007DWeb/
+  repo-actions: [issue]
 
   opengraph: true
   twitter-card:
-    creator: "@minebocek"
+    creator: "@DrDeception"
     image: "images/twitter-card.png"
 
   sidebar:
-    background: "#325b74" # Pantone Midnight - Fall 2022
-    logo: "images/logo.png"
+    background: "#6699CC" # Navy Blue
+
+    logo: ""
     pinned: true
     align: center
     tools:
+      - icon: book
+        href: https://bbc.co.uk/
+      - icon: images/moodle.png
       - icon: github
-        href: https://github.com/sta199-f22-1/sta199-f22-1.github.io
+        href: https://github.com/LittleMonkeyLab/PS52007DWeb
         text: "GitHub organization"
-      - icon: code-square
-        href: https://cmgr.oit.duke.edu/containers
-        text: "RStudio Containers"
-      - icon: person-fill
-        text: "Sakai"
-        menu:
-          - text: Gradescope
-            url: https://sakai.duke.edu/portal/site/d55dc1df-28e1-4637-be6f-6ba7c848fabf/page/e6e5b35b-ae85-4d98-8c56-ec6c559db637
-          - text: Gradebook
-            url: https://sakai.duke.edu/portal/site/d55dc1df-28e1-4637-be6f-6ba7c848fabf/tool/1d0ca2ac-6304-46b2-a6ac-de5a93f677b2/
+      - icon: <i class="ai ai-google-scholar-square ai-3x"></i>
+        href: http://www.learn.gold.ac.uk/
+        text: "Learn.Gold VLE Page"
+      # - icon: person-fill
+      #   text: "Sakai"
+      #   menu:
+      #     - text: Gradescope
+      #       url: https:
+      #     - text: Gradebook
+      #       url: https:
 
     style: docked
     search: true
@@ -54,27 +58,63 @@ website:
             text: Teaching team
           - href: index.qmd
             text: Schedule
-          - href: course-links.qmd
-            text: Useful links
-          - href: course-faq.qmd
-            text: FAQ
+
+
+      - text: "---"
+      - href: coursework-overview.qmd
+        text: Coursework overview
+      - section: "Critical Proposal"
+        contents:
+          - href: critical-proposal-description.qmd
+            text: Description
+          - href: critical-proposal-marking.qmd
+            text: Marking guidelines
+          - href: critical-proposal-tips-resources.qmd
+            text: Tips + resources
+      - section: "MiniDissertation"
+        contents:
+          - href: minidissertation-description.qmd
+            text: Description
+          - href: minidissertation-marking.qmd
+            text: Marking guidelines
+          - href: minidissertation-tips-resources.qmd
+            text: Tips + resources
+      - section: "CHIP Learning Log"
+        contents:
+          - href: chip-log-description.qmd
+            text: Description
+          - href: chip-log-marking.qmd
+            text: Marking guidelines
+          - href: chip-log-tips-resources.qmd
+            text: Tips + resources
+      - text: "---"
       - section: "Computing"
         contents:
           - href: computing-access.qmd
             text: Access
           - href: computing-troubleshooting.qmd
             text: Troubleshooting
-      - section: "Project"
-        contents:
-          - href: project-description.qmd
-            text: Description
-          - href: project-tips-resources.qmd
-            text: Tips + resources
+      - text: "---"
+      - href: course-faq.qmd
+        text: FAQ
+      - href: course-links.qmd
+        text: Useful links
+
+#
+#           - href: course-faq.qmd
+#             text: FAQ
+#           - href: course-links.qmd
+#             text: Useful links
+
+
 
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2022, Mine Çetinkaya-Rundel"
-    background: "#325b74" # Pantone Midnight - Fall 2022
+    right: "This page is built with ☕,❤️and [Quarto](https://quarto.org/)."
+    left: |
+      Content {{< fa brands creative-commons >}} 2022 by gordon wright. All content licensed under a {{< fa brands creative-commons >}}
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-nc >}} {{< fa brands creative-commons-sa >}}<br>
+      [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+    background: "#6699CC"
 
 format:
   html:
@@ -86,6 +126,8 @@ format:
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
+comments:
+  hypothesis: true
 
 execute:
   freeze: auto

@@ -1,44 +1,47 @@
 ---
-title: "STA 199: Introduction to Data Science"
-subtitle: "Section 1 - Dr. Mine Çetinkaya-Rundel"
+title: "PS52007D - Research Methods in Psychology 2022/3"
+subtitle: "Module Coordinator - Dr. Gordon Wright"
 execute:
   freeze: false
 ---
 
-This page contains an outline of the topics, content, and assignments for the semester.
-Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.
+This page cjiiontains an outline of the topics, content, and assignments
+for the semester. Note that this schedule will be updated as the
+semester progresses and the timeline of topics and assignments might be
+updated throughout the semester.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 library(googlesheets4)
 library(gt)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1GCwNNWDK0yJPBraWtfZ-tmtXJsgvkLhYTCVtk6c_6js/edit?usp=sharing", sheet = "sec1-mine")
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1ZsmGNXF5fZuNbkGsYRnFxhDKS9fZJQdtOg2Cw3KlrtQ/edit?usp=sharing", sheet = "TopLevel")
 ```
 
 ::: column-screen-right
 ```{r, echo = FALSE}
 d %>%
   mutate(
-    date = as.Date(date),
-    week = ifelse(is.na(week), "", week)
+    Date = as.Date(Date),
+    Week = ifelse(is.na(Week), "", Week)
   ) %>%
   gt() %>%
-  text_transform(cells_body(columns = c(prepare)),
+
+  text_transform(cells_body(columns = c(Prep)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("book", fill_opacity = 0.1),
         glue::glue("<a href = {x}>{fontawesome::fa('book')}</a>")
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(slides)),
+  text_transform(cells_body(columns = c(Slides)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("laptop", fill_opacity = 0.1),
         glue::glue("<a href = {x}>{fontawesome::fa('laptop')}</a>")
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(ae)),
+  text_transform(cells_body(columns = c(Readings)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
         glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
@@ -52,36 +55,56 @@ d %>%
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(lab)),
+  text_transform(cells_body(columns = c(Skills)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("users-rectangle", fill_opacity = 0.1),
         glue::glue("<a href = {x}>{fontawesome::fa('users-rectangle')}</a>")
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(exam)),
+  text_transform(cells_body(columns = c(Extra)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("file-circle-check", fill_opacity = 0.1),
         glue::glue("<a href = {x}>{fontawesome::fa('file-circle-check')}</a>")
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(project)),
+  text_transform(cells_body(columns = c(MiniDiss)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
         glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
       )
     }
   ) %>%
-  fmt_date(date, date_style = 9) %>%
-  sub_missing(columns = c(date, what, topic, notes), missing_text = "") %>%
+  fmt_date(Date, date_style = 9) %>%
+  sub_missing(columns = c(Date, Session, Topic, Notes), missing_text = "") %>%
   cols_align(
     align = "center", 
-    columns = c(week, dow, prepare, slides, ae, hw, lab, exam, project)
+    columns = c(Week, Prep, Slides, Readings, hw, Skills, Extra, MiniDiss)
     ) %>%
   cols_align(
     align = "left", 
-    columns = c(date, what, topic, notes)
-    )  
+    columns = c(Date, Session, Topic, Notes)
+    )  %>%
+opt_row_striping(data = , row_striping = TRUE) %>% 
+
+tab_header(title = md("TABLE TITLE 2007"))  %>%
+     tab_style(
+     locations = cells_column_labels(columns = everything()),
+     style     = list(
+       #Give a thick border below
+       cell_borders(sides = "bottom", weight = px(3)),
+       #Make text bold
+       cell_text(weight = "bold")
+     )
+   ) %>% 
+   #Apply different style to the title
+   tab_style(
+     locations = cells_title(groups = "title"),
+     style     = list(
+       cell_text(weight = "bold", size = 24)
+     )
+   )
+
 ```
 :::
