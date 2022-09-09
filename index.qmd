@@ -16,6 +16,7 @@ library(gt)
 library(tidyverse)
 gs4_deauth()
 d <- read_sheet("https://docs.google.com/spreadsheets/d/1ZsmGNXF5fZuNbkGsYRnFxhDKS9fZJQdtOg2Cw3KlrtQ/edit?usp=sharing", sheet = "TopLevel")
+
 ```
 
 ::: column-screen-right
@@ -26,65 +27,69 @@ d %>%
     Week = ifelse(is.na(Week), "", Week)
   ) %>%
   gt() %>%
-
   text_transform(cells_body(columns = c(Prep)),
     fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("book", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('book')}</a>")
+      ifelse(is.na(x), fontawesome::fa("clipboard-list", fill_opacity = 0),
+        ifelse(x == "x", fontawesome::fa("clipboard-list", fill_opacity = 0.2),       
+          glue::glue("<a href = {x}>{fontawesome::fa('clipboard-list')}</a>")
+        )
       )
     }
   ) %>%
   text_transform(cells_body(columns = c(Slides)),
     fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("laptop", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('laptop')}</a>")
+      ifelse(is.na(x), fontawesome::fa("person-chalkboard", fill_opacity = 0),
+             ifelse(x == "x", fontawesome::fa("person-chalkboard", fill_opacity = 0.2), 
+        glue::glue("<a href = {x}>{fontawesome::fa('person-chalkboard')}</a>")
+        )
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(Readings)),
+  text_transform(cells_body(columns = c(Lab)),
     fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
-      )
-    }
-  ) %>%
-  text_transform(cells_body(columns = c(hw)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("keyboard", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('keyboard')}</a>")
+      ifelse(is.na(x), fontawesome::fa("book", fill_opacity = 0),
+             ifelse(x == "x", fontawesome::fa("book", fill_opacity = 0.2), 
+        glue::glue("<a href = {x}>{fontawesome::fa('book')}</a>")
+        )
       )
     }
   ) %>%
   text_transform(cells_body(columns = c(Skills)),
     fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("users-rectangle", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('users-rectangle')}</a>")
+      ifelse(is.na(x), fontawesome::fa("screwdriver-wrench", fill_opacity = 0),
+             ifelse(x == "x", fontawesome::fa("screwdriver-wrench", fill_opacity = 0.2), 
+        glue::glue("<a href = {x}>{fontawesome::fa('screwdriver-wrench')}</a>")
+        )
       )
     }
   ) %>%
   text_transform(cells_body(columns = c(Extra)),
     fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("file-circle-check", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('file-circle-check')}</a>")
+      ifelse(is.na(x), fontawesome::fa("wand-magic-sparkles", fill_opacity = 0),
+             ifelse(x == "x", fontawesome::fa("wand-magic-sparkles", fill_opacity = 0.2), 
+        glue::glue("<a href = {x}>{fontawesome::fa('wand-magic-sparkles')}</a>")
+        )
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(MiniDiss)),
+  text_transform(cells_body(columns = c(Community)),
     fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
+      ifelse(is.na(x), fontawesome::fa("comments", fill_opacity = 0),
+             ifelse(x == "x", fontawesome::fa("comments", fill_opacity = 0.2), 
+        glue::glue("<a href = {x}>{fontawesome::fa('comments')}</a>")
+        )
       )
     }
   ) %>%
-  fmt_date(Date, date_style = 9) %>%
-  sub_missing(columns = c(Date, Session, Topic, Notes), missing_text = "") %>%
+  fmt_date(Date, date_style = 7) %>%
+  sub_missing(columns = c(Date, Topic, Notes), missing_text = "") %>%
   cols_align(
     align = "center", 
-    columns = c(Week, Prep, Slides, Readings, hw, Skills, Extra, MiniDiss)
+    columns = c(Week, Prep, Slides, Lab, Skills, Extra, Community)
     ) %>%
   cols_align(
     align = "left", 
-    columns = c(Date, Session, Topic, Notes)
+    columns = c(Date, Topic, Notes)
     )  %>%
 opt_row_striping(data = , row_striping = TRUE) %>% 
 
@@ -101,10 +106,18 @@ tab_header(title = md("TABLE TITLE 2007"))  %>%
    #Apply different style to the title
    tab_style(
      locations = cells_title(groups = "title"),
-     style     = list(
-       cell_text(weight = "bold", size = 24)
-     )
-   )
+     style     = cell_text(weight = "bold", size = 24)
 
+   ) %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(rows = c(1, 7, 13, 14, 20, 26)
+    ) 
+  )%>%
+  tab_style(
+    style = cell_fill(color = "grey"),
+    locations = cells_body(rows = c(1, 7, 13, 14, 20, 26)
+  )
+)
 ```
 :::

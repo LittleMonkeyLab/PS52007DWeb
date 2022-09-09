@@ -1,6 +1,10 @@
 ---
-title: "Syllabus"
+title: "Course Syllabus"
+subtitle: "All the official information"
+bibliography: references.bib
+csl: apa7.csl
 ---
+
 
 ::: {.content-visible when-format="html"}
 [**Click here**](sta199-f22-1-syllabus.pdf) **to download a PDF copy of

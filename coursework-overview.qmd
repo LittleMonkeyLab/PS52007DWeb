@@ -1,0 +1,6 @@
+---
+title: "Coursework Overview"
+subtitle: "Everything you need to know about the coursework for Research Methods"
+bibliography: references.bib
+csl: apa7.csl
+---

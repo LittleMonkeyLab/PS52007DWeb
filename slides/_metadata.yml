@@ -1,7 +1,13 @@
 institute: "Goldsmiths, University of London <br> PS52007D Research Methods in Psychology 2022/3"
 author: "Dr. Gordon Wright"
-footer: "[🔗 PS%2007DWeb.github.io](https://PS52007DWeb.github.io/)"
+footer: "[🔗 PS52007DWeb.github.io](https://PS52007DWeb.github.io/)"
 logo: "images/logo.png"
+
+bibliography: sliderefs.bib
+csl: apa7.csl
+
+
+
 format:
   revealjs:
     theme: slides.scss
@@ -14,7 +20,7 @@ format:
     menu: true
     controls-layout: bottom-right
     preview-links: true
-    logo: images/logo.png
+
 
 editor: visual
 execute:

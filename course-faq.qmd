@@ -1,5 +1,8 @@
 ---
-title: "FAQ"
+title: "Course FAQ"
+subtitle: "Please take the time to look at these REAL questions from years gone by"
+bibliography: references.bib
+csl: apa7.csl
 ---
 
 ## How do I export my assignment PDF from RStudio to upload to Gradescope?

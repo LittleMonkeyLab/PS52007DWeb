@@ -1,5 +1,8 @@
 ---
 title: "Useful links"
+subtitle: "Things you might have need for"
+bibliography: references.bib
+csl: apa7.csl
 ---
 
 +-------------+--------------------------------------------------------+
