@@ -1,1 +1,7 @@
+---
+title: "Critical Proposal Marking"
+subtitle: "How we will mark your Critical Proposal"
+bibliography: references.bib
+csl: apa7.csl
+---
 

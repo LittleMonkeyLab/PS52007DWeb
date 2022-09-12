@@ -1,6 +1,10 @@
 ---
-title: "Course overview"
+title: "Course Overview"
+subtitle: "Everything you need to know about the course"
+bibliography: references.bib
+csl: apa7.csl
 ---
+
 
 Intro to data science and statistical thinking. Learn to explore,
 visualize, and analyze data to understand natural phenomena, investigate

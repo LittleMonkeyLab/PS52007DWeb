@@ -1,1 +1,20 @@
+---
+title: "MiniDissertation Marking"
+subtitle: "How we will mark your MiniDissertation"
+bibliography: references.bib
+csl: apa7.csl
+---
 
+Here is anyyyyyother test of references... 2207
+
+@baughman2014a
+
+@jonason2012c
+
+Read this full APA format citation
+
+[@baughman2014a]
+
+@hughes2021
+
+## References

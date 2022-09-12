@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STA 199 - Computing troubleshooting</title>
+<title>PS52007D Research Methods in Psychology - Troubleshooting</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +24,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./project-description.html" rel="next">
+<link href="./course-faq.html" rel="next">
 <link href="./computing-access.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -37,6 +37,8 @@ ul.task-list{list-style: none;}
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -56,12 +58,13 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 
 
-<meta name="twitter:title" content="STA 199 - Computing troubleshooting">
-<meta name="twitter:description" content="If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools.">
-<meta name="twitter:image" content="https://sta199-f22-1.github.io/images/twitter-card.png">
-<meta name="twitter:creator" content="@minebocek">
+<meta name="twitter:title" content="PS52007D Research Methods in Psychology - Troubleshooting">
+<meta name="twitter:description" content="What to do if you have IT issues">
+<meta name="twitter:image" content="https:/images/twitter-card.png">
+<meta name="twitter:creator" content="@DrDeception">
 <meta name="twitter:image-height" content="418">
 <meta name="twitter:image-width" content="800">
 <meta name="twitter:card" content="summary_large_image">
@@ -73,7 +76,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Computing troubleshooting</h1>
+      <h1 class="quarto-secondary-nav-title">Troubleshooting</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -85,27 +88,16 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/sta199-f22-1/sta199-f22-1.github.io" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="sidebar-tool px-1"><i class="bi bi-code-square"></i></a>
-    <a href="" title="Sakai" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://sakai.duke.edu/portal/site/d55dc1df-28e1-4637-be6f-6ba7c848fabf/page/e6e5b35b-ae85-4d98-8c56-ec6c559db637">
-          Gradescope
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://sakai.duke.edu/portal/site/d55dc1df-28e1-4637-be6f-6ba7c848fabf/tool/1d0ca2ac-6304-46b2-a6ac-de5a93f677b2/">
-          Gradebook
-          </a>
-        </li>
-    </ul>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">PS52007D Research Methods in Psychology</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://bbc.co.uk/" title="" class="sidebar-tool px-1"><i class="bi bi-book"></i></a>
+    <a href="" title="" class="sidebar-tool px-1"><i class="bi bi-images/moodle.png"></i></a>
+    <a href="https://github.com/LittleMonkeyLab/PS52007DWeb" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="http://www.learn.gold.ac.uk/" title="Learn.Gold VLE Page" class="sidebar-tool px-1"><i class="bi bi-<i class=&quot;ai ai-google-scholar-square ai-3x&quot;></i>"></i></a>
   <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+    </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -147,26 +139,98 @@ ul.task-list{list-style: none;}
   <a href="./index.html" class="sidebar-item-text sidebar-link">Schedule</a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./coursework-overview.html" class="sidebar-item-text sidebar-link">Coursework overview</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Critical Proposal</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">Useful links</a>
+  <a href="./critical-proposal-description.html" class="sidebar-item-text sidebar-link">Description</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-faq.html" class="sidebar-item-text sidebar-link">FAQ</a>
+  <a href="./critical-proposal-marking.html" class="sidebar-item-text sidebar-link">Marking guidelines</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./critical-proposal-tips-resources.html" class="sidebar-item-text sidebar-link">Tips + resources</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Computing</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">MiniDissertation</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./minidissertation-description.html" class="sidebar-item-text sidebar-link">Description</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./minidissertation-marking.html" class="sidebar-item-text sidebar-link">Marking guidelines</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./minidissertation-tips-resources.html" class="sidebar-item-text sidebar-link">Tips + resources</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">CHIP Learning Log</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chip-log-description.html" class="sidebar-item-text sidebar-link">Description</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chip-log-marking.html" class="sidebar-item-text sidebar-link">Marking guidelines</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chip-log-tips-resources.html" class="sidebar-item-text sidebar-link">Tips + resources</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Computing</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./computing-access.html" class="sidebar-item-text sidebar-link">Access</a>
@@ -179,26 +243,17 @@ ul.task-list{list-style: none;}
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Project</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-description.html" class="sidebar-item-text sidebar-link">Description</a>
+  <a href="./course-faq.html" class="sidebar-item-text sidebar-link">FAQ</a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-tips-resources.html" class="sidebar-item-text sidebar-link">Tips + resources</a>
+  <a href="./course-links.html" class="sidebar-item-text sidebar-link">Useful links</a>
   </div>
 </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -211,7 +266,8 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Computing troubleshooting</h1>
+<h1 class="title d-none d-lg-block">Troubleshooting</h1>
+<p class="subtitle lead">What to do if you have IT issues</p>
 </div>
 
 
@@ -441,16 +497,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./project-description.html" class="pagination-link">
-        <span class="nav-page-text">Description</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./course-faq.html" class="pagination-link">
+        <span class="nav-page-text">FAQ</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2022, Mine Çetinkaya-Rundel</div>   
-    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-hidden="true"></i> 2022 by gordon wright. All content licensed under a <i class="fa-brands fa-creative-commons" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-by" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-nc" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i><br> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0)</a></div>   
+    <div class="nav-footer-right">This page is built with ☕,❤️and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
 

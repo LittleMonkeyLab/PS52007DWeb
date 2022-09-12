@@ -1,6 +1,10 @@
 ---
-title: "Teaching team"
+title: "Course Teaching Team"
+subtitle: "It's a team adventure"
+bibliography: references.bib
+csl: apa7.csl
 ---
+
 
 ## Instructor
 

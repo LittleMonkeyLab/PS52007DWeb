@@ -1,1 +1,7 @@
+---
+title: "CHIP Learning Log Tips and Resources"
+subtitle: "Some words of advice about the CHIP Learning Log"
+bibliography: references.bib
+csl: apa7.csl
+---
 

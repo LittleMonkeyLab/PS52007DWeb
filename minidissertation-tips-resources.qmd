@@ -1,1 +1,7 @@
+---
+title: "MiniDissertation Tips and Resources"
+subtitle: "Helpful advice for doing well in your MiniDissertation"
+bibliography: references.bib
+csl: apa7.csl
+---
 

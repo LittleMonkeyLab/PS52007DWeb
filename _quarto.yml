@@ -1,14 +1,16 @@
 project:
   type: website
   output-dir: docs
-  resouces:
+  bibliography: references.bib
+  csl: apa7.csl
+  resources:
     - sta199-f22-1-syllabus.pdf
 
 website:
   page-navigation: true
   title: "PS52007D Research Methods in Psychology"
   description: "Homepage for PS52007D Research Methods in Psychology at Goldsmiths, University of London"
-  site-url: "https://sta199-f22-1.github.io/"
+  site-url: "https:"
 
   repo-url: https://github.com/LittleMonkeyLab/PS52007DWeb/
   repo-actions: [issue]
@@ -21,7 +23,7 @@ website:
   sidebar:
     background: "#6699CC" # Navy Blue
 
-    logo: ""
+    # logo: ""
     pinned: true
     align: center
     tools:
@@ -119,15 +121,33 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, style/sta199.scss]
-      dark: [cosmo, style/sta199.scss, style/dark.scss]
+      light: [cosmo, style/light.scss]
+      dark: [cosmo, style/light.scss, style/dark.scss]
     linkcolor: "#325b74" # Pantone Midnight - Fall 2022
     toc: true
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
-comments:
-  hypothesis: true
+    comments:
+      hypothesis: true
+
+  # pdf:
+  #   # template: templates/eisvogel.tex
+  #   geometry:
+  #     - top=30mm
+  #     - left=30mm
+  # docx: default
+  #
+  #   # toc: true
+  #   # toc-depth: 3
+  #   # mainfont: "Atkinson Hyperlegible"
+  #   # sansfont: "Atkinson Hyperlegible"
+  #   # linkcolor: blue
+  #   # links-as-notes: true
+  #   # papersize: a4
+  #   # reference-links: true
+  #   # template: /templates/eisvogel.tex
+
 
 execute:
   freeze: auto
