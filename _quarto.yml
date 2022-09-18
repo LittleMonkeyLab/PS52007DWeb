@@ -5,6 +5,7 @@ project:
   csl: apa7.csl
   resources:
     - sta199-f22-1-syllabus.pdf
+# keep-tex: true
 
 website:
   page-navigation: true
@@ -147,6 +148,30 @@ format:
   #   # papersize: a4
   #   # reference-links: true
   #   # template: /templates/eisvogel.tex
+  # revealjs:
+  #   theme: _resources/templates/Lectures_RM.scss
+  #   mainfont: Atkinson Hyperlegible
+  #   self-contained: true
+  #   incremental: false
+  #   margin: 0.2
+  #   smaller: false
+  #   output-ext: htm
+  # pdf:
+  #   template: _resources/templates/latex.tex
+  #   # template: _resources/templates/latex-colour.tex
+    # pdfengine: lualatex
+    # fontsize: 12pt # 10, 11, or 12pt
+    # mainfont: Atkinson Hyperlegible # font used for main text throughout document
+    # sansfont: Atkinson Hyperlegible
+    # classoption: landscape
+    # papersize: a4
+    # pagestyle: empty
+    # cosmiclatte: false # set true to turn on an off-white page background colour
+  # html:
+  # #   template: _resources/templates/html.html
+  #
+  # pptx:
+  #   reference-doc: _resources/templates/pptx/RMLecturepptxTemplate.pptx
 
 
 execute:

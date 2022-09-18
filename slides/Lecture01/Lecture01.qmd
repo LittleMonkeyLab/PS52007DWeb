@@ -1,0 +1,144 @@
+---
+title: 'Lecture01'
+subtitle: 'Lecture topic'
+author: 'Dr Gordon Wright'
+date: today #Better to put in the delivery date
+logo: "images/LMLLOGO.png"
+footer: "Footer text"
+---
+
+# New Section Sunday
+
+::: columns
+::: {.column width="40%"}
+Fucker Does
+:::
+
+::: {.column width="60%"}
+Wanker Doesnt'
+:::
+:::
+
+# Section heading 2007
+
+::: sectionhead
+ABCDES
+:::
+
+## Test Slide
+
+::: columns
+::: {.column width="40%"}
+### List One
+
+-   Item A
+-   Item B
+-   Item C
+:::
+
+::: {.column width="60%"}
+### List Two
+
+-   Item X
+-   Item Y
+-   Item Z
+:::
+:::
+
+## Quarto enables collaborating <br>across coding comfort levels {.takeaway .center}
+
+::: notes
+Quarto enables collaborating across coding comfort levels, which means
+it's a friendly tool Also means we can broaden our idea of collaborators
+substantially and earlier.
+
+And, then RStudio IDE Visual Editor further lowers barriers
+
+I'll do one final demo here - Friendly for new learners, also for
+experienced users.
+
+Think about how you might use this yourself, and teach a colleague
+:::
+
+## Slide heading
+
+Text here. You can use the <mark>mark tag</mark> to highlight things in
+some formats. 2007
+
+### level 3 heading
+
+text
+
+#### level 4 heading
+
+text
+
+## New slide heading
+
+![](images/paper.png)
+
+## Incremental lists
+
+::: incremental
+-   Put in code fence
+-   Using three colons
+:::
+
+## Slide Title {background-color="darkblue"}
+
+Txt - bullet - bullet 2
+
+## Emoji
+
+🤩 Totes work, except in PDF output, boo.
+
+## References
+
+[@andorsky2020; @datu2021; @king2021; @rice2021]
+
+## Speaker notes
+
+Include speaker notes in another fenced code block.
+
+::: notes
+Like this.
+:::
+
+## Columns
+
+::: columns
+::: {.column width="50%"}
+Put your contents in column code blocks
+:::
+
+::: {.column width="50%"}
+To make them show up in two columns
+:::
+:::
+
+# New Heading 1 2007
+
+::: fragment
+Fade in
+:::
+
+::: notes
+Fade out
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: {.fragment .fade-in-then-out}
+Fade in, then out
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
