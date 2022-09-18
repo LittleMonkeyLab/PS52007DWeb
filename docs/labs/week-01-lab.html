@@ -58,7 +58,6 @@ ul.task-list{list-style: none;}
 }</script>
 <script async="" src="https://hypothes.is/embed.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta name="twitter:title" content="PS52007D Research Methods in Psychology - Lab 1 - Data visualization">
 <meta name="twitter:description" content="In this lab, you will…">
@@ -266,11 +265,7 @@ ul.task-list{list-style: none;}
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
   <ul class="collapse">
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#data-lets-take-a-trip-to-the-midwest" id="toc-data-lets-take-a-trip-to-the-midwest" class="nav-link" data-scroll-target="#data-lets-take-a-trip-to-the-midwest">Data: Let’s take a trip to the Midwest</a></li>
   </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  <li><a href="#grading-50-pts" id="toc-grading-50-pts" class="nav-link" data-scroll-target="#grading-50-pts">Grading (50 pts)</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/LittleMonkeyLab/PS52007DWeb/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -320,219 +315,14 @@ Important
 <section id="getting-started" class="level1">
 <h1>Getting started</h1>
 <ul>
-<li><p>Go to the <a href="https://www.github.com/sta199-f22-1"><strong>sta199-f22-1</strong></a> organization on GitHub. Click on the repo with the prefix <strong>lab-01</strong>. It contains the starter documents you need to complete the lab.</p></li>
-<li><p>Clone the repo and start a new project in RStudio. See the <a href="https://sta199-f22-1.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project">Lab 0 instructions</a> for details on cloning a repo and starting a new R project.</p></li>
+<li><p>Go to tganization on GitHub. Click on the repo with the prefix <strong>lab-01</strong>. It contains the starter documents you need to complete the lab.</p></li>
+<li><p>Clone the repo and start a new project in RStudio. See t on cloning a repo and starting a new R project.</p></li>
 </ul>
 <section id="packages" class="level2">
 <h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<p>We will use the <strong>tidyverse</strong> package to create and customize plots in R.</p>
-<div class="cell">
-
-</div>
-</section>
-<section id="data-lets-take-a-trip-to-the-midwest" class="level2">
-<h2 class="anchored" data-anchor-id="data-lets-take-a-trip-to-the-midwest">Data: Let’s take a trip to the Midwest</h2>
-<p>The data in this lab is in the <code>midwest</code> data frame. It is part of the <strong>ggplot2</strong> R package, so the <code>midwest</code> data set is automatically loaded when you load the tidyverse package.</p>
-<p>The data contains demographic characteristics of counties in the Midwest region of the United States.</p>
-<p>Because the data set is part of the <strong>ggplot2</strong> package, you can read documentation for the data set, including variable definitions by typing <code>?midwest</code> in the <strong>console</strong>.</p>
-</section>
-</section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
-<p>As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.</p>
-<p>In addition, the code should not exceed the 80 character limit, so that all the code can be read when you render to PDF. To help with this, you can add a vertical line at 80 characters by clicking “Tools” <span class="math inline">\(\rightarrow\)</span> “Global Options” <span class="math inline">\(\rightarrow\)</span> “Code” <span class="math inline">\(\rightarrow\)</span> “Display”, then set “Margin Column” to 80, and click “Apply”.</p>
-<p>Remember that continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to <strong>render, commit, and push</strong> your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.</p>
-<ol type="1">
-<li>Make a histogram to visualize the population density of counties. Set the number of bins to 10 and include axes labels and a title.
-<ul>
-<li>Describe the shape of the distribution.</li>
-<li>Does there appear to be are any outliers? Briefly explain.</li>
-</ul></li>
-</ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For more details and code examples for histograms <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">ggplot2 reference page</a>.</p>
-</div>
-</div>
-<ol start="2" type="1">
-<li>Create a scatterplot of the percentage of people with a college degree (<code>percollege</code>) versus percentage below poverty (<code>percbelowpoverty</code>) with points colored by <code>state</code>. Label the axes and legend and give the plot a title. Use the <code>scale_color_viridis</code> function to apply the viridis color palette to your plot.</li>
-</ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>See <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html"><em>Introduction to the viridis color maps</em></a> to read more about the viridis R package and see code examples.</p>
-</div>
-</div>
-<div class="render-commit-push">
-<p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Ex 1 -2”.</p>
-<p>Make sure to commit and push all changed files so that your Git pane is empty afterwards.</p>
-</div>
-<ol start="3" type="1">
-<li><p>Describe what you observe in the plot from the previous exercise. In your description, include similarities and differences in the patterns across states.</p></li>
-<li><p>Now, let’s examine the relationship between the same two variables, using a separate plot for each state. Label the axes and give the plot a title. Use <code>geom_smooth</code> with the argument <code>se = FALSE</code> to add a smooth curve fit to the data. Which plot do you prefer - this plot or the plot in Ex 2? Briefly explain your choice.</p></li>
-</ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>se = FALSE</code> removes the confidence bands around the line. These bands show the uncertainty around the smooth curve. We’ll discuss uncertainty around estimates later in the course and bring these bands back then.</p>
-</div>
-</div>
-<div class="render-commit-push">
-<p>Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.</p>
-<p>Once again, make sure to commit and push all changed files so that your Git pane is empty afterwards.</p>
-</div>
-<ol start="5" type="1">
-<li><em>Do some states have counties that tend to be geographically larger than others?</em> To explore this question, create side-by-side boxplots of area (<code>area</code>) of a county based on state (<code>state</code>).
-<ul>
-<li>Describe what you observe from the plot.</li>
-<li>Which state has the single largest county? How do you know based on the plot?</li>
-</ul></li>
-<li><em>Do some states have a higher percentage of their counties located in a metropolitan area?</em> Create a segmented bar chart with one bar per state and the fill determined by the distribution of <code>metro</code>, whether a county is considered in a metro area. The y axis of the segmented barplot should range from 0 to 1.
-<ul>
-<li>What do you notice from the plot?</li>
-</ul></li>
-</ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For this exercise, you should begin with the data wrangling code below. We will learn more about data wrangling next week.</p>
-</div>
-</div>
-<div class="render-commit-push">
-<p>Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.</p>
-<p>And once again, make sure to commit and push all changed files so that your Git pane is empty afterwards. We keep repeating this because it’s important, and because we see students forget to do this. So take a moment to make sure you’re following along with the instructions around Git.</p>
-</div>
-<ol start="7" type="1">
-<li>Recreate the plot below.</li>
-</ol>
-<p>Hints:</p>
-<ul>
-<li><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">The <code>ggplot2</code> reference for themes</a> will be helpful in determining the theme.</li>
-<li>The <code>size</code> of the points is 2.</li>
-<li>The transparency (<code>alhpa</code>) of the points is 0.5.</li>
-<li>You can put line breaks in labels with <code>\n</code>.</li>
-</ul>
-<p><img src="images/lab-1/ex-7.png" class="img-fluid"></p>
-<div class="render-commit-push">
-<p>Render, commit, and push your final changes to GitHub with a meaningful commit message.</p>
-<p>Make sure to commit and push all changed files so that your Git pane is empty afterwards.</p>
-</div>
-</section>
-<section id="submission" class="level1">
-<h1>Submission</h1>
-<p>Once you are finished with the lab, you will your final PDF document to Gradescope.</p>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Before you wrap up the assignment, make sure all documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.</p>
-<p>You must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.</p>
-</div>
-</div>
-<p>To submit your assignment:</p>
-<ul>
-<li>Go to <a href="http://www.gradescope.com" class="uri">http://www.gradescope.com</a> and click <em>Log in</em> in the top right corner.</li>
-<li>Click <em>School Credentials</em> <span class="math inline">\(\rightarrow\)</span> <em>Duke NetID</em> and log in using your NetID credentials.</li>
-<li>Click on your <em>STA 199</em> course.</li>
-<li>Click on the assignment, and you’ll be prompted to submit it.</li>
-<li>Mark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).</li>
-<li>Select the first page of your .pdf submission to be associated with the <em>“Workflow &amp; formatting”</em> question.</li>
-</ul>
-</section>
-<section id="grading-50-pts" class="level1">
-<h1>Grading (50 pts)</h1>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Component</th>
-<th style="text-align: left;">Points</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Ex 1</td>
-<td style="text-align: left;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ex 2</td>
-<td style="text-align: left;">6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ex 3</td>
-<td style="text-align: left;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ex 4</td>
-<td style="text-align: left;">8</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ex 5</td>
-<td style="text-align: left;">6</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ex 6</td>
-<td style="text-align: left;">6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ex 7</td>
-<td style="text-align: left;">8</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Workflow &amp; formatting</td>
-<td style="text-align: left;">8</td>
-</tr>
-</tbody>
-</table>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The “Workflow &amp; formatting” grade is to assess the reproducible workflow. This includes having at least 3 informative commit messages, labeling the code chunks, and having readable code that does not exceed 80 characters, i.e., we can read all your code in the rendered PDF.</p>
-</div>
-</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
