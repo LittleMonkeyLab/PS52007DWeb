@@ -45,6 +45,8 @@ ABCDES
 :::
 :::
 
+
+
 ## Quarto enables collaborating <br>across coding comfort levels {.takeaway .center}
 
 ::: notes
