@@ -27,7 +27,7 @@ d %>%
     Week = ifelse(is.na(Week), "", Week)
   ) %>%
   gt() %>%
-  text_transform(cells_body(columns = c(Prep)),
+  text_transform(cells_body(columns = c(Prelude)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("clipboard-list", fill_opacity = 0),
         ifelse(x == "x", fontawesome::fa("clipboard-list", fill_opacity = 0.2),       
@@ -54,15 +54,6 @@ d %>%
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(Skills)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("screwdriver-wrench", fill_opacity = 0),
-             ifelse(x == "x", fontawesome::fa("screwdriver-wrench", fill_opacity = 0.2), 
-        glue::glue("<a href = {x}>{fontawesome::fa('screwdriver-wrench')}</a>")
-        )
-      )
-    }
-  ) %>%
   text_transform(cells_body(columns = c(Extra)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("wand-magic-sparkles", fill_opacity = 0),
@@ -72,7 +63,7 @@ d %>%
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(Community)),
+  text_transform(cells_body(columns = c(Check-in)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("comments", fill_opacity = 0),
              ifelse(x == "x", fontawesome::fa("comments", fill_opacity = 0.2), 
@@ -85,7 +76,7 @@ d %>%
   sub_missing(columns = c(Date, Topic, Notes), missing_text = "") %>%
   cols_align(
     align = "center", 
-    columns = c(Week, Prep, Slides, Lab, Skills, Extra, Community)
+    columns = c(Week, Prep, Slides, Lab, Extra, Check-in)
     ) %>%
   cols_align(
     align = "left", 
