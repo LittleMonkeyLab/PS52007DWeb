@@ -63,7 +63,7 @@ d %>%
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c(Check-in)),
+  text_transform(cells_body(columns = c("Check in")),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("comments", fill_opacity = 0),
              ifelse(x == "x", fontawesome::fa("comments", fill_opacity = 0.2), 
@@ -76,7 +76,7 @@ d %>%
   sub_missing(columns = c(Date, Topic, Notes), missing_text = "") %>%
   cols_align(
     align = "center", 
-    columns = c(Week, Prep, Slides, Lab, Extra, Check-in)
+    columns = c(Week, Prelude, Slides, Lab, Extra, "Check in")
     ) %>%
   cols_align(
     align = "left", 
