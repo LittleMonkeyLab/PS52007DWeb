@@ -84,7 +84,7 @@ d %>%
     )  %>%
 opt_row_striping(data = , row_striping = TRUE) %>% 
 
-tab_header(title = md("TABLE TITLE 2007"))  %>%
+tab_header(title = md("TABLE TITLE 2007b8"))  %>%
      tab_style(
      locations = cells_column_labels(columns = everything()),
      style     = list(
