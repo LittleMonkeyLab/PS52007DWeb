@@ -41,7 +41,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
         with: 
-          folder: docs
-          clean: true
-          clean-exclude: |
-          CNAME.txt
+          publish_branch: main
+          publish_dir: ./docs
+          disable_nojekyll: true
+          cname: researchmethods.littlemonkeylab.com
