@@ -20,7 +20,7 @@ d <- read_sheet("https://docs.google.com/spreadsheets/d/1ZsmGNXF5fZuNbkGsYRnFxhD
 ```
 
 ::: column-screen-right
-```{r, echo = FALSE}
+```{r, echo = FALSE, warning=FALSE}
 d %>%
   mutate(
     Date = as.Date(Date),
