@@ -8,6 +8,7 @@ project:
 # keep-tex: true
 
 website:
+  google-analytics: "G-KS294259KL"
   page-navigation: true
   title: "PS52007D Research Methods in Psychology"
   description: "Homepage for PS52007D Research Methods in Psychology at Goldsmiths, University of London"
