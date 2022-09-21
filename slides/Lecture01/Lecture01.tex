@@ -90,6 +90,22 @@
 \fi
 \pagestyle{empty}
 \makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
 \makeatother
 \makeatletter
 \makeatother
@@ -139,6 +155,10 @@
 \@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
 \makeatother
 \makeatletter
+\@ifpackageloaded{sidenotes}{}{\usepackage{sidenotes}}
+\@ifpackageloaded{marginnote}{}{\usepackage{marginnote}}
+\makeatother
+\makeatletter
 \makeatother
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
@@ -171,9 +191,9 @@
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{Lecture topic}
+\subtitle{Content Not Yet Available}
 \author{Dr Gordon Wright}
-\date{9/19/22}
+\date{03/10/22}
 
 % my preamble additions =============================================================
 
@@ -285,7 +305,7 @@
     \thispagestyle{empty}
         \newpage
   
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, sharp corners, frame hidden, interior hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, sharp corners, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 
 
@@ -297,14 +317,216 @@
 
 \begin{center}
 
-\hypertarget{new-section-sunday}{%
-\section{New Section Sunday}\label{new-section-sunday}}
+\hypertarget{new-section}{%
+\section{New Section}\label{new-section}}
 
 \end{center}
 
-Fucker Does
+\newpage
 
-Wanker Doesnt'
+\hypertarget{bullet-list-no-build}{%
+\subsection{Bullet List (no build)}\label{bullet-list-no-build}}
+
+\begin{itemize}
+\item
+  Point 1
+\item
+  Point 2
+\item
+  Point 3
+\end{itemize}
+
+\newpage
+
+\hypertarget{bullet-list-with-build}{%
+\subsection{Bullet List (with build)}\label{bullet-list-with-build}}
+
+\begin{itemize}
+\tightlist
+\item
+  List element A
+\item
+  List element B
+\item
+  List element C
+\end{itemize}
+
+\newpage
+
+\hypertarget{page-with-aside}{%
+\subsection{Page with aside}\label{page-with-aside}}
+
+Here is an important point
+
+\marginnote{\begin{footnotesize}
+
+Additional commentary.
+
+\end{footnotesize}}
+
+\newpage
+
+\hypertarget{page-with-a-note-comment}{%
+\subsection{Page with a note comment}\label{page-with-a-note-comment}}
+
+Here is something I say
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, coltitle=black, titlerule=0mm, opacitybacktitle=0.6, breakable, bottomtitle=1mm, toprule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toptitle=1mm, rightrule=.15mm]
+
+\newpage
+
+\hypertarget{note}{%
+\subsection{Note}\label{note}}
+
+This is very noteworthy
+
+\end{tcolorbox}
+
+\newpage
+
+\hypertarget{page-with-a-warning}{%
+\subsection{Page with a warning}\label{page-with-a-warning}}
+
+Here is something I say
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colframe=quarto-callout-warning-color-frame, coltitle=black, titlerule=0mm, opacitybacktitle=0.6, breakable, bottomtitle=1mm, toprule=.15mm, colback=white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, arc=.35mm, colbacktitle=quarto-callout-warning-color!10!white, bottomrule=.15mm, toptitle=1mm, rightrule=.15mm]
+
+\newpage
+
+\hypertarget{warning}{%
+\subsection{Warning}\label{warning}}
+
+Be WARNED!!
+
+\end{tcolorbox}
+
+\newpage
+
+\hypertarget{page-with-an-important-comment}{%
+\subsection{Page with an important
+comment}\label{page-with-an-important-comment}}
+
+Here is something I say
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, coltitle=black, titlerule=0mm, opacitybacktitle=0.6, breakable, bottomtitle=1mm, toprule=.15mm, colback=white, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, arc=.35mm, colbacktitle=quarto-callout-important-color!10!white, bottomrule=.15mm, toptitle=1mm, rightrule=.15mm]
+
+\newpage
+
+\hypertarget{important}{%
+\subsection{Important}\label{important}}
+
+This is very Important
+
+\end{tcolorbox}
+
+\newpage
+
+\hypertarget{page-with-a-tip}{%
+\subsection{Page with a tip}\label{page-with-a-tip}}
+
+Here is something I say
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, coltitle=black, titlerule=0mm, opacitybacktitle=0.6, breakable, bottomtitle=1mm, toprule=.15mm, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, toptitle=1mm, rightrule=.15mm]
+
+\newpage
+
+\hypertarget{tip}{%
+\subsection{Tip}\label{tip}}
+
+This is a useful tip
+
+\end{tcolorbox}
+
+\newpage
+
+\hypertarget{page-with-a-caution}{%
+\subsection{Page with a caution}\label{page-with-a-caution}}
+
+Here is something I say
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colframe=quarto-callout-caution-color-frame, coltitle=black, titlerule=0mm, opacitybacktitle=0.6, breakable, bottomtitle=1mm, toprule=.15mm, colback=white, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Danger}, arc=.35mm, colbacktitle=quarto-callout-caution-color!10!white, bottomrule=.15mm, toptitle=1mm, rightrule=.15mm]
+
+\newpage
+
+\hypertarget{caution}{%
+\subsection{Caution}\label{caution}}
+
+This is something to be cautious about
+
+\end{tcolorbox}
+
+\newpage
+
+\hypertarget{two-columns-text}{%
+\subsection{Two Columns (Text)}\label{two-columns-text}}
+
+Left column
+
+Right column
+
+\newpage
+
+\hypertarget{two-columns-text-image}{%
+\subsection{Two Columns (Text + Image)}\label{two-columns-text-image}}
+
+Left column
+
+\includegraphics[max height=0.5\paperheight]{images/LMLLOGO.png}
+
+\newpage
+
+\hypertarget{slide-with-different-background-colour}{%
+\subsection{Slide with different background
+colour}\label{slide-with-different-background-colour}}
+
+{Shout}
+
+{Question}
+
+{takeaway}
+
+\href{www.bbc.co.uk}{A link to the BBC website}
+
+\newpage
+
+\hypertarget{speaker-notes}{%
+\subsection{Speaker Notes}\label{speaker-notes}}
+
+Here is some content
+
+\vfill
+
+\begin{tcolorbox}[beforeafter skip=1cm, ignore nobreak=true, breakable, colframe=notes-frame, colback=notes-bg, coltext=notes-text, boxsep=2mm, arc=0mm, boxrule=0.5mm]
+
+Speaker notes (press `s' when presenting to switch to speaker mode).
+
+\end{tcolorbox}
+
+\newpage
+
+\hypertarget{here-is-a-2-panel-tabset}{%
+\subsection{Here is a 2 panel tabset}\label{here-is-a-2-panel-tabset}}
+
+\newpage
+
+\hypertarget{tab-a}{%
+\paragraph{Tab A}\label{tab-a}}
+
+Content for Tab A
+
+\newpage
+
+\hypertarget{tab-b}{%
+\paragraph{Tab B}\label{tab-b}}
+
+Content for Tab B
+
+\newpage
+
+\hypertarget{slide-with-footnote}{%
+\subsection{Slide with footnote}\label{slide-with-footnote}}
+
+Very important point\footnote{A footnote} made to the class
 
 \newpage
 
@@ -317,12 +539,12 @@ Wanker Doesnt'
 
 \end{center}
 
-ABCDES
+subtitle
 
 \newpage
 
-\hypertarget{test-slide}{%
-\subsection{Test Slide}\label{test-slide}}
+\hypertarget{columns-unequal-20-80}{%
+\subsection{2 columns unequal 20\% 80\%}\label{columns-unequal-20-80}}
 
 \newpage
 
@@ -356,83 +578,10 @@ ABCDES
 
 \newpage
 
-\hypertarget{quarto-enables-collaborating-across-coding-comfort-levels}{%
-\subsection{\texorpdfstring{Quarto enables collaborating across coding
-comfort
-levels}{Quarto enables collaborating  across coding comfort levels}}\label{quarto-enables-collaborating-across-coding-comfort-levels}}
-
-\vfill
-
-\begin{tcolorbox}[beforeafter skip=1cm, ignore nobreak=true, breakable, colframe=notes-frame, colback=notes-bg, coltext=notes-text, boxsep=2mm, arc=0mm, boxrule=0.5mm]
-
-Quarto enables collaborating across coding comfort levels, which means
-it's a friendly tool Also means we can broaden our idea of collaborators
-substantially and earlier.
-
-And, then RStudio IDE Visual Editor further lowers barriers
-
-I'll do one final demo here - Friendly for new learners, also for
-experienced users.
-
-Think about how you might use this yourself, and teach a colleague
-
-\end{tcolorbox}
-
-\newpage
-
-\hypertarget{slide-heading}{%
-\subsection{Slide heading}\label{slide-heading}}
-
-Text here. You can use the mark tag to highlight things in some formats.
-2007
-
-\newpage
-
-\hypertarget{level-3-heading}{%
-\subsubsection{level 3 heading}\label{level-3-heading}}
-
-text
-
-\newpage
-
-\hypertarget{level-4-heading}{%
-\paragraph{level 4 heading}\label{level-4-heading}}
-
-text
-
-\newpage
-
-\hypertarget{new-slide-heading}{%
-\subsection{New slide heading}\label{new-slide-heading}}
-
-\includegraphics[max height=0.5\paperheight]{images/paper.png}
-
-\newpage
-
-\hypertarget{incremental-lists}{%
-\subsection{Incremental lists}\label{incremental-lists}}
-
-\begin{itemize}
-\tightlist
-\item
-  Put in code fence
-\item
-  Using three colons
-\end{itemize}
-
-\newpage
-
-\hypertarget{slide-title}{%
-\subsection{Slide Title}\label{slide-title}}
-
-Txt - bullet - bullet 2
-
-\newpage
-
-\hypertarget{emoji}{%
-\subsection{Emoji}\label{emoji}}
-
-🤩 Totes work, except in PDF output, boo.
+\hypertarget{level-2-centred-text-with-break-with-striking-takeaway-background}{%
+\subsection{\texorpdfstring{Level 2 centred text with break with
+striking takeaway
+background}{Level 2 centred text with break   with striking takeaway background}}\label{level-2-centred-text-with-break-with-striking-takeaway-background}}
 
 \newpage
 
@@ -443,8 +592,8 @@ Txt - bullet - bullet 2
 
 \newpage
 
-\hypertarget{speaker-notes}{%
-\subsection{Speaker notes}\label{speaker-notes}}
+\hypertarget{speaker-notes-1}{%
+\subsection{Speaker notes}\label{speaker-notes-1}}
 
 Include speaker notes in another fenced code block.
 
@@ -458,21 +607,12 @@ Like this.
 
 \newpage
 
-\hypertarget{columns}{%
-\subsection{Columns}\label{columns}}
-
-Put your contents in column code blocks
-
-To make them show up in two columns
-
-\newpage
-
 \vspace*{2.5cm}
 
 \begin{center}
 
-\hypertarget{new-heading-1-2007}{%
-\section{New Heading 1 2007}\label{new-heading-1-2007}}
+\hypertarget{fragments-with-entrance}{%
+\section{Fragments with entrance}\label{fragments-with-entrance}}
 
 \end{center}
 
@@ -488,7 +628,11 @@ Fade out
 
 Highlight red
 
+Highlight current red (available in green and blue)
+
 Fade in, then out
+
+Fade in, then semi out
 
 Slide up while fading in
 
