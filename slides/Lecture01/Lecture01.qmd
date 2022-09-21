@@ -1,34 +1,158 @@
 ---
 title: 'Lecture01'
-subtitle: 'Lecture topic'
+subtitle: 'Content Not Yet Available'
 author: 'Dr Gordon Wright'
-date: today #Better to put in the delivery date
+date: "03/10/22"
 logo: "images/LMLLOGO.png"
-footer: "Footer text"
+footer: "[VLE](https://learn.gold.ac.uk/course/view.php?id=24472) | [GitHub](www.github.com)"
 ---
 
-# New Section Sunday
+# New Section
+
+## Bullet List (no build)
+
+-   Point 1
+
+-   Point 2
+
+-   Point 3
+
+## Bullet List (with build)
+
+::: incremental
+-   List element A
+-   List element B
+-   List element C
+:::
+
+## Page with aside
+
+Here is an important point
+
+::: aside
+Additional commentary.
+:::
+
+## Page with a note comment
+
+Here is something I say
+
+::: {.callout-note collapse="false" appearance="default" icon="true"}
+## Note
+
+This is very noteworthy
+:::
+
+## Page with a warning
+
+Here is something I say
+
+::: {.callout-warning collapse="false" appearance="default" icon="true"}
+## Warning
+
+Be WARNED!!
+:::
+
+## Page with an important comment
+
+Here is something I say
+
+::: {.callout-important collapse="false" appearance="default" icon="true"}
+## Important
+
+This is very Important
+:::
+
+## Page with a tip
+
+Here is something I say
+
+::: {.callout-tip collapse="false" appearance="default" icon="true"}
+## Tip
+
+This is a useful tip
+:::
+
+## Page with a caution
+
+Here is something I say
+
+::: {.callout-caution collapse="false" appearance="default" icon="true"}
+## Caution
+
+This is something to be cautious about
+:::
+
+## Two Columns (Text)
 
 ::: columns
-::: {.column width="40%"}
-Fucker Does
+::: {.column width="50%"}
+Left column
 :::
 
-::: {.column width="60%"}
-Wanker Doesnt'
+::: {.column width="50%"}
+Right column
 :::
 :::
+
+## Two Columns (Text + Image)
+
+::: columns
+::: {.column width="50%"}
+Left column
+:::
+
+::: {.column width="50%"}
+![LittleMonkeyLab](images/LMLLOGO.png){width="200"}
+:::
+:::
+
+## Slide with different background colour {background-color="teal"}
+
+[Shout]{.shout}
+
+[Question]{.question}
+
+[takeaway]{.takeaway}
+
+::: footerbox
+[A link to the BBC website](www.bbc.co.uk)
+:::
+
+## Speaker Notes
+
+Here is some content
+
+::: notes
+Speaker notes (press 's' when presenting to switch to speaker mode).
+:::
+
+## Here is a 2 panel tabset
+
+::: panel-tabset
+### Tab A
+
+Content for Tab A
+
+### Tab B
+
+Content for Tab B
+:::
+
+## Slide with footnote
+
+Very important point[^1] made to the class
+
+[^1]: A footnote
 
 # Section heading 2007
 
-::: sectionhead
-ABCDES
-:::
+subtitle
 
-## Test Slide
+## 2 columns unequal 20% 80%
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="20%"}
 ### List One
 
 -   Item A
@@ -36,7 +160,7 @@ ABCDES
 -   Item C
 :::
 
-::: {.column width="60%"}
+::: {.column width="80%"}
 ### List Two
 
 -   Item X
@@ -45,54 +169,7 @@ ABCDES
 :::
 :::
 
-
-
-## Quarto enables collaborating <br>across coding comfort levels {.takeaway .center}
-
-::: notes
-Quarto enables collaborating across coding comfort levels, which means
-it's a friendly tool Also means we can broaden our idea of collaborators
-substantially and earlier.
-
-And, then RStudio IDE Visual Editor further lowers barriers
-
-I'll do one final demo here - Friendly for new learners, also for
-experienced users.
-
-Think about how you might use this yourself, and teach a colleague
-:::
-
-## Slide heading
-
-Text here. You can use the <mark>mark tag</mark> to highlight things in
-some formats. 2007
-
-### level 3 heading
-
-text
-
-#### level 4 heading
-
-text
-
-## New slide heading
-
-![](images/paper.png)
-
-## Incremental lists
-
-::: incremental
--   Put in code fence
--   Using three colons
-:::
-
-## Slide Title {background-color="darkblue"}
-
-Txt - bullet - bullet 2
-
-## Emoji
-
-🤩 Totes work, except in PDF output, boo.
+## Level 2 centred text with break <br> with striking takeaway background {.takeaway .center}
 
 ## References
 
@@ -106,19 +183,7 @@ Include speaker notes in another fenced code block.
 Like this.
 :::
 
-## Columns
-
-::: columns
-::: {.column width="50%"}
-Put your contents in column code blocks
-:::
-
-::: {.column width="50%"}
-To make them show up in two columns
-:::
-:::
-
-# New Heading 1 2007
+# Fragments with entrance
 
 ::: fragment
 Fade in
@@ -132,8 +197,16 @@ Fade out
 Highlight red
 :::
 
+::: {.fragment .highlight-current-red}
+Highlight current red (available in green and blue)
+:::
+
 ::: {.fragment .fade-in-then-out}
 Fade in, then out
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Fade in, then semi out
 :::
 
 ::: {.fragment .fade-up}
