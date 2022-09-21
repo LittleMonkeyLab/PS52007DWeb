@@ -100,6 +100,8 @@ website:
         text: FAQ
       - href: course-links.qmd
         text: Useful links
+      - href: /slides/LectureSlides.qmd
+        text: SlideHeaven
 
 #
 #           - href: course-faq.qmd

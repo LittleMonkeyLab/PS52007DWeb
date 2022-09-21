@@ -4,4 +4,3 @@ subtitle: "Everything you need to know about your MiniDissertation"
 bibliography: references.bib
 csl: apa7.csl
 ---
-

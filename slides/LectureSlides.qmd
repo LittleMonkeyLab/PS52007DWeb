@@ -1,0 +1,6 @@
+---
+title: "Lecture Slides"
+subtitle: "Everything you need to know about Lecture Slides"
+bibliography: sliderefs.bib
+csl: apa7.csl
+---

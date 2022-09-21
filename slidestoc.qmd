@@ -1,0 +1,15 @@
+---
+title: "SLIDES TOC"
+subtitle: "Everything you need to know about Lecture Slides ToC"
+toc: true
+bibliography: references.bib
+csl: apa7.csl
+---
+
+Week 1
+
+Slides
+
+Handout
+
+Fun
