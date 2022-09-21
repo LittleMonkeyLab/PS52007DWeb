@@ -1,0 +1,28 @@
+---
+title: "Lab 1 - Data visualization"
+categories: "Lab"
+execute:
+  eval: false
+---
+
+::: callout-important
+This lab is due Friday, Sep 9 at 11:59pm.
+:::
+
+# Learning goals
+
+In this lab, you will...
+
+-   learn how to effectively visualize numeric and categorical data.
+-   continue developing a workflow for reproducible data analysis.
+
+# Getting started
+
+-   Go to tganization on GitHub. Click on the repo with the prefix
+    **lab-01**. It contains the starter documents you need to complete
+    the lab.
+
+-   Clone the repo and start a new project in RStudio. See t on cloning
+    a repo and starting a new R project.
+
+## Packages
