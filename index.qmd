@@ -10,7 +10,7 @@ LUNCH](https://github.com/LittleMonkeyLab/PS52007DWeb/blob/58b7f96a7391d6c29da5c
 an outline of the topics, content, and assignments for the semester.
 Note that this schedule will be updated as the semester progresses and
 the timeline of topics and assignments might be updated throughout the
-semester.
+[semester](docs/slides/Lecture01/Lecture01.pdf).
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 library(googlesheets4)
