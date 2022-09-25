@@ -1,30 +1,19 @@
 ---
 title: "Course Overview"
 subtitle: "Everything you need to know about the course"
-bibliography: references.bib
-csl: apa7.csl
 ---
 
+Blurb
 
-Intro to data science and statistical thinking. Learn to explore,
-visualize, and analyze data to understand natural phenomena, investigate
-patterns, model outcomes, and make predictions, and do so in a
-reproducible and shareable manner. Gain experience in data wrangling and
-munging, exploratory data analysis, predictive modeling, and data
-visualization, and effective communication of results. Work on problems
-and case studies inspired by and based on real-world questions and data.
-The course will focus on the R statistical computing language. No
-statistical or computing background is necessary. Not open to students
-who have taken a 100-level Statistical Science course, Statistical
-Science 210, or a Statistical Science course numbered 300 or above.
+## Timetabled Sessions
 
-## Class meetings
-
-| Meeting | Location                       | Time                        |
-|---------|--------------------------------|-----------------------------|
-| Lecture | French Science 2231            | Tue & Thur 10:15 - 11:30 am |
-| Lab 01  | Perkins Link 087 (Classroom 3) | Mon 10:15 - 11:30 am        |
-| Lab 02  | Perkins Link 087 (Classroom 3) | Mon 1:45 - 3:00 pm          |
-| Lab 03  | Perkins Link 087 (Classroom 3) | Mon 3:30 - 4:45 pm          |
-| Lab 04  | Perkins Link 087 (Classroom 3) | Mon 5:15 - 6:30 pm          |
-| Lab 05  | Perkins Link 087 (Classroom 3) | Mon 12:00 - 1:15 pm         |
+| Session | Location         | Staff  | Time                  |
+|---------|------------------|--------|-----------------------|
+| Lecture | PSH LG02         | Gordon | Monday 11:00 - 12:00  |
+| Lab 01  | Whitehead WB300  | TBC    | Tuesday 9:30 - 11:30  |
+| Lab 02  | Whitehead WB304a | TBC    | Tuesday 9:30 - 11:30  |
+| Lab 03  | Whitehead WB304b | TBC    | Tuesday 9:30 - 11:30  |
+| Lab 04  | Whitehead WB300  | TBC    | Tuesday 13:30 - 15:30 |
+| Lab 05  | Whitehead WB304a | TBC    | Tuesday 13:30 - 15:30 |
+| Lab 06  | Whitehead WB304b | TBC    | Tuesday 13:30 - 15:30 |
+| Lab 07  | Whitehead WB300  | TBC    | Tuesday 15:30 - 17:30 |
