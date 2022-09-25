@@ -65,28 +65,19 @@ d %>%
       )
     }
   ) %>%
-  text_transform(cells_body(columns = c("Tickets")),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("comments", fill_opacity = 0),
-             ifelse(x == "x", fontawesome::fa("comments", fill_opacity = 0.2), 
-        glue::glue("<a href = {x}>{fontawesome::fa('comments')}</a>")
-        )
-      )
-    }
-  ) %>%
   fmt_date(Date, date_style = 7) %>%
-  sub_missing(columns = c(Date, Topic, Notes), missing_text = "") %>%
+  sub_missing(columns = c(Date, Lectures, Labs, Notes), missing_text = "") %>%
   cols_align(
     align = "center", 
-    columns = c(Week, Prelude, Slides, Lab, Extras, Tickets)
+    columns = c(Week, Prelude, Slides, Lab, Extras)
     ) %>%
   cols_align(
     align = "left", 
-    columns = c(Date, Topic, Notes)
+    columns = c(Date, Lectures, Labs, Notes)
     )  %>%
 opt_row_striping(data = , row_striping = TRUE) %>% 
 
-tab_header(title = md("TABLE TITLE 2007b8"))  %>%
+tab_header(title = md("Teaching Schedule 2022-23"))  %>%
      tab_style(
      locations = cells_column_labels(columns = everything()),
      style     = list(
