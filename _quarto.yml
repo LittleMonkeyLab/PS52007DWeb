@@ -38,7 +38,7 @@ website:
 
     style: docked
     search: true
-    collapse-level: 1
+    collapse-level: 0
     contents:
       - section: "Course information"
         contents:
@@ -52,17 +52,13 @@ website:
             text: Teaching team
           - href: index.qmd
             text: Schedule
-
-
-      # - text: "---"
-      # - href: coursework-overview.qmd
-      #   text: Coursework overview
-      # - section: "Critical Proposal"
-      #   contents:
-      #     - href: critical-proposal-description.qmd
-      #       text: Description
-      #     - href: critical-proposal-marking.qmd
-      #       text: Marking guidelines
+          - text: "---"
+      - section: "CHIP Topics"
+        contents:
+          - href: CHIP/CHIP1.qmd
+            text: Topic 1
+          - href: CHIP/CHIP2.qmd
+            text: Topic 2
       #     - href: critical-proposal-tips-resources.qmd
       #       text: Tips + resources
       # - section: "MiniDissertation"
